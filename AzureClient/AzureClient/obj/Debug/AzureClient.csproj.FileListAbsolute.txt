@@ -1,0 +1,13 @@
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\AzureClient.exe.config
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\AzureClient.exe
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\AzureClient.pdb
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\Microsoft.ServiceBus.dll
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\Microsoft.ServiceBus.xml
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.csprojResolveAssemblyReference.cache
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.Form1.resources
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.Properties.Resources.resources
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.csproj.GenerateResource.Cache
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.exe
+c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.pdb

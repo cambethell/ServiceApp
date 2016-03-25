@@ -18,6 +18,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # =========================
+# Debug folders
+# =========================
+AzureClient/AzureClient/bin/Debug/
+SBQWorker/bin/Debug/
+
+# =========================
 # Operating System Files
 # =========================
 
