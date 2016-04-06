@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>2.8</ProductVersion>
-    <ProjectGuid>839198d0-428f-480d-8e50-582774569bbd</ProjectGuid>
+    <ProjectGuid>5983ed31-a1f7-492f-af7c-067faab8ab9d</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ServiceApp</RootNamespace>
@@ -39,7 +39,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SBQWorker\SBQWorker.csproj">
       <Name>SBQWorker</Name>
-      <Project>{3900cf0b-922e-4f71-a902-a0cb66a1a0a5}</Project>
+      <Project>{d40526f9-1278-48a2-955f-35669118c773}</Project>
       <Private>True</Private>
       <RoleType>Worker</RoleType>
       <RoleName>SBQWorker</RoleName>

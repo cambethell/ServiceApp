@@ -12,8 +12,10 @@
   <Role name="SBQWorker">
     <Instances count="1" />
     <ConfigurationSettings>
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=server4102s3b0;AccountKey=/sldm/OcrXBwJqPcKj+QEya3amt1f2Tx8baguZX+KhBd/WTjJjY7i3awaBJnfr7vGY2o31HHXziDBAz42N3UkQ==" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://queuebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=5ZVTXEEBHiLZ0+PXkS0Vaq5or3XgG9HLRElx2JRGcaQ=" />
+      <Setting name="Microsoft.Database.ConnectionString" value="Server=tcp:servicea.database.windows.net,1433;Database=serviceDB;User ID=sadmin@servicea;Password=rootpass1!;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

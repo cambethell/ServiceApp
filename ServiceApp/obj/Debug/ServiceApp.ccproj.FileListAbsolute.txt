@@ -1,51 +1,102 @@
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\bin\Debug\ServiceConfiguration.cscfg
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\bin\Debug\ServiceDefinition.csdef
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Edm.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.OData.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Services.Client.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.ServiceBus.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Configuration.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Diagnostics.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Storage.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\MonAgentListener.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Newtonsoft.Json.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll.config
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.pdb
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\System.Spatial.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\System.Spatial.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Edm.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.OData.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Services.Client.resources.dll
-C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\bin\Debug\ServiceConfiguration.cscfg
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\bin\Debug\ServiceDefinition.csdef
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Edm.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.OData.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Services.Client.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.ServiceBus.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Configuration.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Diagnostics.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Storage.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\MonAgentListener.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Newtonsoft.Json.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll.config
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.pdb
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\System.Spatial.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\System.Spatial.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Edm.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.OData.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+c:\users\cameron\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\bin\Debug\ServiceDefinition.csdef
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\de\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\es\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\fr\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\it\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ja\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ko\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Edm.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.OData.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.Data.Services.Client.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.ServiceBus.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\MonAgentListener.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\Newtonsoft.Json.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\ru\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.dll.config
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\SBQWorker.pdb
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\System.Spatial.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hans\System.Spatial.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\zh-Hant\System.Spatial.resources.dll
