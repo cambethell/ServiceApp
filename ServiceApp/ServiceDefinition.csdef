@@ -4,6 +4,8 @@
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
       <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="Microsoft.Database.ConnectionString" />
+      <Setting name="StorageConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

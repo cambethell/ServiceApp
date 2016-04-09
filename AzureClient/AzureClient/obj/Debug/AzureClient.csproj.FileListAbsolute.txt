@@ -11,3 +11,15 @@ c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\o
 c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.csproj.GenerateResource.Cache
 c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.exe
 c:\users\grayden\documents\visual studio 2015\Projects\AzureClient\AzureClient\obj\Debug\AzureClient.pdb
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\AzureClient.exe.config
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.Form1.resources
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.Properties.Resources.resources
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.csproj.GenerateResource.Cache
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\AzureClient.exe
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\AzureClient.pdb
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\Microsoft.ServiceBus.xml
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.exe
+C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.pdb
