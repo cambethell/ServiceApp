@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceApp" generation="1" functional="0" release="0" Id="1c1ab65c-c8c8-44fa-8734-3e03df67cd48" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceApp" generation="1" functional="0" release="0" Id="f1927c85-8ee7-405e-bc1f-55ae7fc62e07" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="ServiceAppGroup" generation="1" functional="0" release="0">
       <settings>

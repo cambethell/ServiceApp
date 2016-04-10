@@ -116,3 +116,4 @@ C:\Users\Cameron\Documents\GitHub\ServiceApp\SBQWorker\bin\Debug\zh-Hans\System.
 C:\Users\Cameron\Documents\GitHub\ServiceApp\SBQWorker\bin\Debug\zh-Hant\System.Spatial.resources.dll
 C:\Users\Cameron\Documents\GitHub\ServiceApp\SBQWorker\obj\Debug\SBQWorker.dll
 C:\Users\Cameron\Documents\GitHub\ServiceApp\SBQWorker\obj\Debug\SBQWorker.pdb
+C:\Users\Cameron\Documents\GitHub\ServiceApp\SBQWorker\obj\Debug\SBQWorker.csprojResolveAssemblyReference.cache

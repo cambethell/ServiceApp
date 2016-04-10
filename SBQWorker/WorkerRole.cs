@@ -24,7 +24,11 @@ namespace SBQWorker
         // The name of your queue
         const string queueName = "queuebus";
         const string topicName = "subtopic";
-
+        static int tableKey = 0;
+        CloudStorageAccount storageAccount;
+        CloudTableClient tableClient;
+        CloudTable table;
+        TableBatchOperation batchOperation;
         // QueueClient is thread-safe. Recommended that you cache 
         // rather than recreating it on every request
         QueueClient queueClient;
@@ -47,7 +51,11 @@ namespace SBQWorker
 
                     if (md.Purpose == MessagePurpose.Connect)
                     {
-                        var resp = new MessageData("", MessagePurpose.Update);
+                        addPlayer(md.User, md.Message);
+                        var query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
+                        var result = table.ExecuteQuery(query);
+
+                        var resp = new MessageData("", "", MessagePurpose.Update, result);
                         var bm = new BrokeredMessage(resp);
                         topicClient.Send(bm);
                     }
@@ -78,67 +86,16 @@ namespace SBQWorker
                 Trace.WriteLine("queue did not exist");
             }
 
-            //*****************************
-
             // Retrieve the storage account from the connection string.
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
-                CloudConfigurationManager.GetSetting("StorageConnectionString"));
+            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
 
             // Create the table client.
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+            tableClient = storageAccount.CreateCloudTableClient();
 
             // Create the CloudTable object that represents the "people" table.
-            CloudTable table = tableClient.GetTableReference("people");
+            table = tableClient.GetTableReference("people");
             table.CreateIfNotExists();
-
-            // Create the batch operation.
-            TableBatchOperation batchOperation = new TableBatchOperation();
-
-            // Create a customer entity and add it to the table.
-            CustomerEntity customer1 = new CustomerEntity("Smith", "Jeff");
-            customer1.Email = "Jeff@contoso.com";
-            customer1.PhoneNumber = "425-555-0104";
-
-            // Create another customer entity and add it to the table.
-            CustomerEntity customer2 = new CustomerEntity("Smith", "Ben");
-            customer2.Email = "Ben@contoso.com";
-            customer2.PhoneNumber = "425-555-0102";
-
-            // Add both customer entities to the batch insert operation.
-            batchOperation.Insert(customer1);
-            batchOperation.Insert(customer2);
-
-            // Execute the batch operation.
-            try
-            {
-                table.ExecuteBatch(batchOperation);
-            }
-            catch (StorageException e)
-            {
-                Debug.WriteLine(e.RequestInformation.HttpStatusCode);
-
-                Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorCode);
-
-                Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorMessage);             
-            }
-
-            // Construct the query operation for all customer entities where PartitionKey="Smith".
-            TableQuery<CustomerEntity> query = new TableQuery<CustomerEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Smith"));
-
-            // Print the fields for each customer.
-            foreach (CustomerEntity entity in table.ExecuteQuery(query))
-            {
-                Trace.WriteLine($"{entity.PartitionKey}, {entity.RowKey}\t{entity.Email}\t{entity.PhoneNumber}");
-            } 
-
-
-
-
-
-             
-            
-            //*****************************
-
+        
             // Configure Topic Settings
             TopicDescription td = new TopicDescription(topicName);
             td.MaxSizeInMegabytes = 5120;
@@ -152,6 +109,7 @@ namespace SBQWorker
 
             topicClient = TopicClient.CreateFromConnectionString(SBConnectionString, topicName);
             queueClient = QueueClient.CreateFromConnectionString(SBConnectionString, queueName);
+
             return base.OnStart();
         }
 
@@ -162,6 +120,43 @@ namespace SBQWorker
             queueClient.Close();
             CompletedEvent.Set();
             base.OnStop();
+        }
+
+        //this function defaults the partition type be Player since its adding players
+        public void addPlayer(string username, string message)
+        {
+            // Create the batch operation.
+            batchOperation = new TableBatchOperation();
+
+            // Create a customer entity and add it to the table.
+            UserEntity user1 = new UserEntity("Player", username);
+            user1.Message = message;
+
+            // Add both customer entities to the batch insert operation.
+            batchOperation.Insert(user1);
+
+            // Execute the batch operation.
+            try
+            {
+                table.ExecuteBatch(batchOperation);
+            }
+            catch (StorageException e)
+            {
+                Debug.WriteLine(e.RequestInformation.HttpStatusCode);
+
+                Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorCode);
+
+                Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorMessage);
+            }
+
+            // Construct the query operation for all users entities where PartitionKey="Player".
+            TableQuery<UserEntity> query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
+            
+            // Print the fields for each customer.
+            foreach (UserEntity entity in table.ExecuteQuery(query))
+            {
+                Trace.WriteLine($"{entity.PartitionKey}, {entity.RowKey}\t{entity.Message}");
+            }
         }
     }
 }
