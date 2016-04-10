@@ -64,6 +64,8 @@ namespace AzureClient {
                     // Process message from subscription.
                     MessageData md = message.GetBody<MessageData>();
                     query = md.Query;
+                    Invalidate();
+
                     // Remove message from subscription.
                     message.Complete();
                 } catch (Exception e) {
@@ -82,19 +84,18 @@ namespace AzureClient {
         }
 
         private void OnPaint(object sender, PaintEventArgs e) {
+            float y = 0.0F;
+            var g = e.Graphics;
+
+            // Create font and brush.
+            Font f = new Font("Arial", 16);
+            SolidBrush b = new SolidBrush(Color.Black);
+
             if (query != null) {
-                float y = 0.0F;
-                var g = e.Graphics;
-
                 foreach (UserEntity entity in query) {
-                    // Create font and brush.
-                    Font drawFont = new Font("Arial", 16);
-                    SolidBrush drawBrush = new SolidBrush(Color.Black);
+                    Debug.WriteLine(entity.RowKey);
 
-                    // Create point for upper-left corner of drawing.
-                    PointF drawPoint = new PointF(225.0F, 20.0F + y);
-
-                    g.DrawString($"{entity.PartitionKey}, {entity.RowKey}\t{entity.Message}", drawFont, drawBrush, drawPoint);
+                    g.DrawString(entity.RowKey, f, b, 225.0F, 20.0F + y);
                     y += 20.0F;
                 }
             }

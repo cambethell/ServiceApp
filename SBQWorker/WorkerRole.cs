@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.ServiceRuntime;
 using AzureClient;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
+using System.Collections.Generic;
 
 namespace SBQWorker {
     public class WorkerRole : RoleEntryPoint {
@@ -52,7 +53,9 @@ namespace SBQWorker {
                     }
 
                     receivedMessage.Complete();
-                } catch {
+                } catch (Exception e) {
+                    Trace.WriteLine(e.StackTrace);
+
                     // Handle any message processing specific exceptions here
                     receivedMessage.Abandon();
                 }
@@ -73,16 +76,6 @@ namespace SBQWorker {
                 Trace.WriteLine("queue did not exist");
             }
 
-            // Retrieve the storage account from the connection string.
-            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
-
-            // Create the table client.
-            tableClient = storageAccount.CreateCloudTableClient();
-
-            // Create the CloudTable object that represents the "people" table.
-            table = tableClient.GetTableReference("people");
-            table.CreateIfNotExists();
-        
             // Configure Topic Settings
             TopicDescription td = new TopicDescription(topicName);
             td.MaxSizeInMegabytes = 5120;
@@ -95,6 +88,16 @@ namespace SBQWorker {
 
             topicClient = TopicClient.CreateFromConnectionString(SBConnectionString, topicName);
             queueClient = QueueClient.CreateFromConnectionString(SBConnectionString, queueName);
+
+            // Retrieve the storage account from the connection string.
+            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+
+            // Create the table client.
+            tableClient = storageAccount.CreateCloudTableClient();
+
+            // Create the CloudTable object that represents the "people" table.
+            table = tableClient.GetTableReference("people");
+            table.CreateIfNotExists();
 
             return base.OnStart();
         }
@@ -113,8 +116,7 @@ namespace SBQWorker {
             batchOperation = new TableBatchOperation();
 
             // Create a customer entity and add it to the table.
-            UserEntity user1 = new UserEntity("Player", username);
-            user1.Message = message;
+            UserEntity user1 = new UserEntity("Player", username, message);
 
             // Add both customer entities to the batch insert operation.
             batchOperation.Insert(user1);

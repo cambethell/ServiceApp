@@ -1,9 +1,8 @@
-﻿using Microsoft.WindowsAzure.Storage.Table;
-using SBQWorker;
+﻿using SBQWorker;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace AzureClient
-{
+namespace AzureClient {
     [DataContract]
     public class MessageData {
         [DataMember]
@@ -13,9 +12,9 @@ namespace AzureClient
         [DataMember]
         public MessagePurpose Purpose { get; private set; }
         [DataMember]
-        public TableQuery<UserEntity> Query;
+        public IEnumerable<UserEntity> Query;
 
-        public MessageData(string u, string s, MessagePurpose p, TableQuery<UserEntity> q = null) {
+        public MessageData(string u, string s, MessagePurpose p, IEnumerable<UserEntity> q = null) {
             User = (string.IsNullOrEmpty(s)) ? "default" : u;
             Message = (string.IsNullOrEmpty(s)) ? "no message" : s;
             Purpose = p;
