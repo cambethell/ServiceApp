@@ -75,3 +75,6 @@ C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\k
 C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\Cameron\Documents\GitHub\ServiceApp\AzureClient\AzureClient\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\Grayden\Documents\Visual Studio 2015\Projects\ServiceApp\AzureClient\AzureClient\bin\Debug\AzureClient.exe.config
+C:\Users\Grayden\Documents\Visual Studio 2015\Projects\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.exe
+C:\Users\Grayden\Documents\Visual Studio 2015\Projects\ServiceApp\AzureClient\AzureClient\obj\Debug\AzureClient.pdb
