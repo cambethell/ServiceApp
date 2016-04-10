@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace SBQWorker
 {
-    public class CustomerEntity : TableEntity
+    public class UserEntity : TableEntity
     {
-        public CustomerEntity(string lastName, string firstName)
+        public UserEntity(string userType, string userName)
         {
-            this.PartitionKey = lastName;
-            this.RowKey = firstName;
+            this.PartitionKey = userType;
+            this.RowKey = userName;
         }
 
-        public CustomerEntity() { }
+        public UserEntity() { }
 
-        public string Email { get; set; }
+        public string Message { get; set; }
 
-        public string PhoneNumber { get; set; }
     }
 }

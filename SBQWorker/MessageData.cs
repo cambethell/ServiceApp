@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Storage.Table;
+using SBQWorker;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AzureClient
 {
@@ -13,12 +11,18 @@ namespace AzureClient
         [DataMember]
         public string Message { get; private set; }
         [DataMember]
+        public string User { get; private set; }
+        [DataMember]
         public MessagePurpose Purpose { get; private set; }
+        [DataMember]
+        public IEnumerable<UserEntity> Query;
 
-        public MessageData(string s, MessagePurpose p)
+        public MessageData(string u, string s, MessagePurpose p, IEnumerable<UserEntity> q = null)
         {
+            User = (string.IsNullOrEmpty(s)) ? "default" : u;
             Message = (string.IsNullOrEmpty(s)) ? "no message" : s;
             Purpose = p;
+            Query = q;
         }
     }
 
@@ -27,7 +31,6 @@ namespace AzureClient
         Update = 1,
         Connect = 2,
         Disconnect = 3,
-        Request = 4,
-        Initialize = 5
+        Error = 4
     }
 }
