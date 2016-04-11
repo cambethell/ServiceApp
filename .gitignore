@@ -20,8 +20,10 @@ $RECYCLE.BIN/
 # =========================
 # Debug folders
 # =========================
-AzureClient/AzureClient/bin/Debug/
+AzureClient/AzureClient/bin/
+AzureClient/AzureClient/obj/
 SBQWorker/bin/Debug/
+ServiceApp/csx/Debug/
 
 # =========================
 # Operating System Files
