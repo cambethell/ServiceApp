@@ -42,15 +42,31 @@ namespace SBQWorker {
 
                     if (md.Purpose == MessagePurpose.Connect) {
                         AddPlayer(md.User, md.Message);
+                    } else if (md.Purpose == MessagePurpose.Disconnect) {
+                        TableOperation retrieveOperation = TableOperation.Retrieve<UserEntity>("Player", md.User);
 
-                        // Construct the query operation for all users entities where PartitionKey="Player".
-                        var query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
-                        var result = table.ExecuteQuery(query);
+                        // Execute the operation.
+                        TableResult retrievedResult = table.Execute(retrieveOperation);
 
-                        var resp = new MessageData("", "", MessagePurpose.Update, result);
-                        var bm = new BrokeredMessage(resp);
-                        topicClient.Send(bm);
+                        // Assign the result to a userEntity.
+                        UserEntity deleteEntity = (UserEntity)retrievedResult.Result;
+
+                        // Create the Delete TableOperation.
+                        if (deleteEntity != null) {
+                            TableOperation deleteOperation = TableOperation.Delete(deleteEntity);
+
+                            // Execute the operation.
+                            table.Execute(deleteOperation);
+                        }
                     }
+
+                    // Construct the query operation for all users entities where PartitionKey="Player".
+                    var query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
+                    var result = table.ExecuteQuery(query);
+
+                    var resp = new MessageData("", "", MessagePurpose.Update, result);
+                    var bm = new BrokeredMessage(resp);
+                    topicClient.Send(bm);
 
                     receivedMessage.Complete();
                 } catch (Exception e) {
