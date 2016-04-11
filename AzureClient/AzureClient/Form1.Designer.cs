@@ -53,7 +53,8 @@
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.textBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "User Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.LoadForm);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
             this.ResumeLayout(false);

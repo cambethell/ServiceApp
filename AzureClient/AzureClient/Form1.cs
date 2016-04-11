@@ -17,12 +17,14 @@ namespace AzureClient {
         const string queueName = "queuebus";
         const string topicName = "subtopic";
         const string subName = "UpdateMessages";
+        string userName = "default";
+        Button disconnectButton;
 
         static string NameSpace = ConfigurationManager.AppSettings["NameSpace"];
         static string SharedAccessKey = ConfigurationManager.AppSettings["SharedAccessKey"];
         static string SharedAccessKeyname = ConfigurationManager.AppSettings["SharedAccessKeyname"];
-        string ConnectionString = "Endpoint=sb://" + NameSpace + 
-                ";SharedAccessKeyName=" + SharedAccessKeyname + 
+        string ConnectionString = "Endpoint=sb://" + NameSpace +
+                ";SharedAccessKeyName=" + SharedAccessKeyname +
                 ";SharedAccessKey=" + SharedAccessKey;
 
         public Form1() {
@@ -46,7 +48,7 @@ namespace AzureClient {
 
             // Initialize the connection to Service Bus queue.
             queueClient = QueueClient.CreateFromConnectionString(ConnectionString, queueName);
-            
+
             if (!namespaceManager.SubscriptionExists(topicName, subName)) {
                 namespaceManager.CreateSubscription(topicName, subName);
                 Debug.WriteLine("creating new sub");
@@ -77,10 +79,20 @@ namespace AzureClient {
         }
 
         private void Connect(object sender, EventArgs e) {
-            string user = textBox.Text;
-            MessageData md = new MessageData(user, "connect message", MessagePurpose.Connect);
+            userName = textBox.Text;
+            MessageData md = new MessageData(userName, "connect message", MessagePurpose.Connect);
             BrokeredMessage bm = new BrokeredMessage(md);
             queueClient.Send(bm);
+
+            textBox.Visible = false;
+            connectButton.Visible = false;
+
+            disconnectButton = new Button();
+            disconnectButton.Location = new Point(12, 38);
+            disconnectButton.Text = "Disconnect";
+            disconnectButton.Click += DisconnectUser;
+            Controls.Add(disconnectButton);
+            Invalidate();
         }
 
         private void OnPaint(object sender, PaintEventArgs e) {
@@ -99,6 +111,26 @@ namespace AzureClient {
                     y += 20.0F;
                 }
             }
+
+            if (userName != "default") {
+                g.DrawString(userName, f, b, 13.0F, 12.0F);
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
+            DisconnectUser(sender, e);
+        }
+
+        private void DisconnectUser(object sender, EventArgs e) {
+            MessageData md = new MessageData(userName, "disconnect message", MessagePurpose.Disconnect);
+            BrokeredMessage bm = new BrokeredMessage(md);
+            queueClient.Send(bm);
+
+            textBox.Visible = true;
+            connectButton.Visible = true;
+            disconnectButton.Visible = false;
+            userName = "default";
+            Invalidate();
         }
     }
 }

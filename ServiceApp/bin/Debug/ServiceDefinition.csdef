@@ -18,10 +18,10 @@
     </ConfigurationSettings>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\rcf\Debug\SBQWorkerContent\" />
+        <SourceDirectory path="C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\rcf\Debug\SBQWorkerContent\" />
       </Content>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\ecf\SBQWorkerContent\" />
+        <SourceDirectory path="C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\ecf\SBQWorkerContent\" />
       </Content>
     </Contents>
     <Imports>
