@@ -26,6 +26,7 @@ namespace AzureClient {
         Update = 1,
         Connect = 2,
         Disconnect = 3,
-        Error = 4
+        Error = 4,
+        Initialize = 5
     }
 }

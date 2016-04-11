@@ -2,13 +2,11 @@
 
 namespace SBQWorker {
     public class UserEntity : TableEntity {
-        public string Message { get; private set; }
 
         public UserEntity() { }
-        public UserEntity(string t, string n, string m) {
+        public UserEntity(string t, string n) {
             PartitionKey = t;
             RowKey = n;
-            Message = m;
         }
     }
 }

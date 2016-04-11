@@ -13,12 +13,12 @@ namespace AzureClient {
         QueueClient queueClient;
         SubscriptionClient subClient;
         IEnumerable<UserEntity> query;
+        Button disconnectButton;
 
         const string queueName = "queuebus";
         const string topicName = "subtopic";
         const string subName = "UpdateMessages";
         string userName = "default";
-        Button disconnectButton;
 
         static string NameSpace = ConfigurationManager.AppSettings["NameSpace"];
         static string SharedAccessKey = ConfigurationManager.AppSettings["SharedAccessKey"];
@@ -59,7 +59,7 @@ namespace AzureClient {
             // Configure the callback options.
             OnMessageOptions options = new OnMessageOptions();
             options.AutoComplete = false;
-            options.AutoRenewTimeout = TimeSpan.FromMinutes(1);
+            options.AutoRenewTimeout = TimeSpan.FromSeconds(1);
 
             subClient.OnMessage((message) => {
                 try {
@@ -76,22 +76,27 @@ namespace AzureClient {
                     message.Abandon();
                 }
             }, options);
+
+            MessageData init = new MessageData(userName, "init message", MessagePurpose.Initialize);
+            BrokeredMessage bm = new BrokeredMessage(init);
+            queueClient.Send(bm);
         }
 
         private void Connect(object sender, EventArgs e) {
             userName = textBox.Text;
-            MessageData md = new MessageData(userName, "connect message", MessagePurpose.Connect);
-            BrokeredMessage bm = new BrokeredMessage(md);
+            MessageData connect = new MessageData(userName, "connect message", MessagePurpose.Connect);
+            BrokeredMessage bm = new BrokeredMessage(connect);
             queueClient.Send(bm);
-
-            textBox.Visible = false;
-            connectButton.Visible = false;
 
             disconnectButton = new Button();
             disconnectButton.Location = new Point(12, 38);
             disconnectButton.Text = "Disconnect";
             disconnectButton.Click += DisconnectUser;
             Controls.Add(disconnectButton);
+
+            textBox.Visible = false;
+            connectButton.Visible = false;
+
             Invalidate();
         }
 
@@ -105,19 +110,18 @@ namespace AzureClient {
 
             if (query != null) {
                 foreach (UserEntity entity in query) {
-                    Debug.WriteLine(entity.RowKey);
-
                     g.DrawString(entity.RowKey, f, b, 225.0F, 20.0F + y);
                     y += 20.0F;
                 }
             }
 
-            if (userName != "default") {
+            if (userName != "default")
                 g.DrawString(userName, f, b, 13.0F, 12.0F);
-            }
+
+            g.DrawLine(Pens.Black, 200.0F, 10.0F, 200.0F, 510.0F);
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
+        private void OnClosing(object sender, FormClosingEventArgs e) {
             DisconnectUser(sender, e);
         }
 
@@ -128,8 +132,10 @@ namespace AzureClient {
 
             textBox.Visible = true;
             connectButton.Visible = true;
-            disconnectButton.Visible = false;
+            if (disconnectButton != null)
+                disconnectButton.Visible = false;
             userName = "default";
+
             Invalidate();
         }
     }

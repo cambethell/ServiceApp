@@ -9,7 +9,6 @@ using Microsoft.WindowsAzure.ServiceRuntime;
 using AzureClient;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
-using System.Collections.Generic;
 
 namespace SBQWorker {
     public class WorkerRole : RoleEntryPoint {
@@ -40,31 +39,37 @@ namespace SBQWorker {
                     MessageData md = receivedMessage.GetBody<MessageData>();
                     Trace.WriteLine(md.Message, "ProcessingMessage");
 
-                    if (md.Purpose == MessagePurpose.Connect) {
-                        AddPlayer(md.User, md.Message);
-                    } else if (md.Purpose == MessagePurpose.Disconnect) {
-                        TableOperation retrieveOperation = TableOperation.Retrieve<UserEntity>("Player", md.User);
+                    if (md.Purpose == MessagePurpose.Connect)
+                        AddPlayer(md.User);
+                    else if (md.Purpose == MessagePurpose.Disconnect) {
+                        // Create the batch operation.
+                        batchOperation = new TableBatchOperation();
 
-                        // Execute the operation.
-                        TableResult retrievedResult = table.Execute(retrieveOperation);
+                        // Create a customer entity and add it to the table.
+                        UserEntity user1 = new UserEntity("Player", md.User);
 
-                        // Assign the result to a userEntity.
-                        UserEntity deleteEntity = (UserEntity)retrievedResult.Result;
+                        // Add both customer entities to the batch insert operation.
+                        batchOperation.Delete(user1);
 
-                        // Create the Delete TableOperation.
-                        if (deleteEntity != null) {
-                            TableOperation deleteOperation = TableOperation.Delete(deleteEntity);
-
-                            // Execute the operation.
-                            table.Execute(deleteOperation);
+                        // Execute the batch operation.
+                        try {
+                            table.ExecuteBatch(batchOperation);
+                        } catch (StorageException e) {
+                            Debug.WriteLine(e.RequestInformation.HttpStatusCode);
+                            Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorCode);
+                            Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorMessage);
                         }
                     }
 
                     // Construct the query operation for all users entities where PartitionKey="Player".
                     var query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
                     var result = table.ExecuteQuery(query);
+                    
+                    // Print the fields for each customer.
+                    foreach (UserEntity entity in result)
+                        Trace.WriteLine($"{entity.PartitionKey}, {entity.RowKey}");
 
-                    var resp = new MessageData("", "", MessagePurpose.Update, result);
+                    var resp = new MessageData("default", "update message", MessagePurpose.Update, result);
                     var bm = new BrokeredMessage(resp);
                     topicClient.Send(bm);
 
@@ -127,12 +132,12 @@ namespace SBQWorker {
         }
 
         //this function defaults the partition type be Player since its adding players
-        public void AddPlayer(string username, string message) {
+        public void AddPlayer(string username) {
             // Create the batch operation.
             batchOperation = new TableBatchOperation();
 
             // Create a customer entity and add it to the table.
-            UserEntity user1 = new UserEntity("Player", username, message);
+            UserEntity user1 = new UserEntity("Player", username);
 
             // Add both customer entities to the batch insert operation.
             batchOperation.Insert(user1);
@@ -144,14 +149,6 @@ namespace SBQWorker {
                 Debug.WriteLine(e.RequestInformation.HttpStatusCode);
                 Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorCode);
                 Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorMessage);
-            }
-
-            // Construct the query operation for all users entities where PartitionKey="Player".
-            TableQuery<UserEntity> query = new TableQuery<UserEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Player"));
-            
-            // Print the fields for each customer.
-            foreach (UserEntity entity in table.ExecuteQuery(query)) {
-                Trace.WriteLine($"{entity.PartitionKey}, {entity.RowKey}\t{entity.Message}");
             }
         }
     }
