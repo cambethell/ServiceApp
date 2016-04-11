@@ -22,7 +22,7 @@
     <Property name="Configuration" value="Debug" />
     <Property name="Platform" value="AnyCPU" />
     <Property name="RoleTargetFramework" value="v4.5" />
-    <Property name="OutputDir" value="C:\Users\Cameron\Documents\GitHub\ServiceApp\ServiceApp\obj\Debug\SBQWorker\" />
+    <Property name="OutputDir" value="C:\Users\Grayden\documents\visual studio 2015\Projects\ServiceApp\ServiceApp\obj\Debug\SBQWorker\" />
     <Property name="EntryPoint" value="SBQWorker.dll" />
     <Property name="SourceDir" value="" />
     <Property name="SitePhysicalPath" value="" />
