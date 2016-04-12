@@ -45,11 +45,8 @@ namespace SBQWorker {
                         // Create the batch operation.
                         batchOperation = new TableBatchOperation();
 
-                        // Create a customer entity and add it to the table.
-                        UserEntity user1 = new UserEntity("Player", md.User);
-
                         // Add both customer entities to the batch insert operation.
-                        batchOperation.Delete(user1);
+                        batchOperation.Delete(md.User);
 
                         // Execute the batch operation.
                         try {
@@ -59,6 +56,31 @@ namespace SBQWorker {
                             Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorCode);
                             Debug.WriteLine(e.RequestInformation.ExtendedErrorInformation.ErrorMessage);
                         }
+                    } else if (md.Purpose == MessagePurpose.Update) {
+                        ;
+
+                        // Create a retrieve operation that takes a customer entity.
+                        TableOperation retrieveOperation = TableOperation.Retrieve<UserEntity>("Player", md.User.RowKey);
+
+                        // Execute the operation.
+                        TableResult retrievedResult = table.Execute(retrieveOperation);
+
+                        // Assign the result to a CustomerEntity object.
+                        UserEntity updateEntity = (UserEntity)retrievedResult.Result;
+
+                        if (updateEntity != null) {
+                            // Change the phone number.
+                            updateEntity.Score += md.User.Score;
+
+                            // Create the Replace TableOperation.
+                            TableOperation updateOperation = TableOperation.Replace(updateEntity);
+
+                            // Execute the operation.
+                            table.Execute(updateOperation);
+
+                            Console.WriteLine("Entity updated.");
+                        } else
+                            Console.WriteLine("Entity could not be retrieved.");
                     }
 
                     // Construct the query operation for all users entities where PartitionKey="Player".
@@ -132,15 +154,12 @@ namespace SBQWorker {
         }
 
         //this function defaults the partition type be Player since its adding players
-        public void AddPlayer(string username) {
+        public void AddPlayer(UserEntity user) {
             // Create the batch operation.
             batchOperation = new TableBatchOperation();
 
-            // Create a customer entity and add it to the table.
-            UserEntity user1 = new UserEntity("Player", username);
-
             // Add both customer entities to the batch insert operation.
-            batchOperation.Insert(user1);
+            batchOperation.Insert(user);
 
             // Execute the batch operation.
             try {

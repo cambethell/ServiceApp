@@ -7,6 +7,9 @@ namespace SBQWorker {
         public UserEntity(string t, string n) {
             PartitionKey = t;
             RowKey = n;
+            Score = 0;
         }
+
+        public int Score { get; set; }
     }
 }
